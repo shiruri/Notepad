@@ -1,0 +1,174 @@
+/* Body Styles */
+body {
+    background-color: #382727; /* Light grayish background for a clean, modern look */
+    font-size: 16px;
+    font-family: "Roboto Mono", monospace; /* Monospaced font for a clean, techy vibe */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Input Box Styling */
+.input {
+    background-color: white; /* White background for the input area */
+    border: 1px solid #ddd; /* Subtle border for a soft, modern look */
+    width: 60%; /* 60% width for a balanced proportion */
+    max-width: 800px; /* Ensure it doesn't get too wide */
+    height: 70vh; /* Take up 70% of the viewport height */
+    margin: 20px auto; /* Centering the input box */
+    padding: 20px; /* Space around the content */
+    box-sizing: border-box;
+    border-radius: 12px; /* Rounded corners for a more modern look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow: hidden;
+}
+
+/* Navigation Bar Styling */
+.nav-bar {
+    background-color: #333; /* Dark background for the navbar */
+    width: 100%;
+    padding: 20px 0; /* Padding for vertical spacing */
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow under navbar */
+}
+
+/* Heading Styling */
+h1 {
+    color: white;
+    font-size: 2rem;
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 100%; /* Full width of the parent container */
+    height: 100%; /* Fill the available height */
+    font-size: 16px; /* Slightly smaller for readability */
+    padding: 15px; /* Padding inside the textarea */
+    line-height: 1.6; /* Adjust line spacing */
+    background: linear-gradient(to bottom, #f4f4f4 30%, #fff 30%); /* Modern light gradients for lines */
+    border: 1px solid #ddd; /* Soft, subtle border */
+    border-radius: 8px; /* Rounded corners */
+    font-family: "Roboto Mono", monospace; /* Typewriter-style font */
+    outline: none;
+    resize: none;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for focus/hover */
+    box-sizing: border-box;
+}
+
+/* Textarea Focus Styling */
+textarea:focus {
+    box-shadow: 0 0 8px rgba(100, 181, 255, 0.6); /* Light blue glow on focus for a clean feel */
+    border-color: #5ab0e6; /* Soft blue border on focus */
+}
+
+/* Navigation Bar Buttons Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+/* CSS */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+button::after, button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+button::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+}
+button::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+button:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+}
+button:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+button:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+/* File Input (hidden) */
+input[type="file"] {
+    display: none;
+}
+
+/* Paragraph Styling */
+p {
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    font-family: "Roboto Mono", monospace;
+}
+
+/* Scrollbar Customization (for a modern Apple-style look) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9e9e9e;
+}
